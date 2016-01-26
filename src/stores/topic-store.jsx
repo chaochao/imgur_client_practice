@@ -6,6 +6,11 @@ module.exports = Reflux.createStore({
     return Api.get("topics/defaults")
       .then(function(res){
         this.topics = res.data;
+        this.triggerChange();
       }.bind(this));
+  },
+  triggerChange: function(){
+    //this in fact is calling the function onChange in topic-list.jsx
+    this.trigger('change',this.topics);
   }
 });
