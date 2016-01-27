@@ -31,3 +31,7 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 ###Note###
 
 Start:37 Done: 50
+
+one bug: when missing some package it will give error message that doesn't help
+
+so do a npm install MAY fix it.
