@@ -1,6 +1,7 @@
 var React = require('react');
 var TopicStore = require('../stores/topic-store');
 var Reflux = require('reflux');
+var Actions = require('../actions');
 module.exports = React.createClass({
   mixins:[
     Reflux.listenTo(TopicStore,'onChange')
@@ -11,7 +12,7 @@ module.exports = React.createClass({
     }
   },
   componentWillMount: function(){
-    TopicStore.getTopics();
+    Actions.getTopics();
   },
   render: function(){
     return  <div className="list-group">
